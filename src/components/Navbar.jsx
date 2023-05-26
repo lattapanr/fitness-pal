@@ -7,26 +7,14 @@ const Navbar = () => {
     return (
         <header>
             <Stack
-                direction="row"
-                justifyContent="space-around"
                 sx={{
+                    display: "flex",
+                    alignItems: { sm: "flex-start", xs: "center" },
                     gap: { sm: "122px", xs: "40px" },
-                    mt: { sm: "32px", xs: "20px" },
+                    mt: { sm: "150px", xs: "30px" },
                     justifyContent: "none",
                 }}
-                px="20px"
             >
-                <Link to="/">
-                    <img
-                        src={Logo}
-                        alt="logo"
-                        style={{
-                            width: "48px",
-                            height: "48px",
-                            margin: "0 20px",
-                        }}
-                    />
-                </Link>
                 <Stack
                     direction="row"
                     gap="40px"
@@ -37,15 +25,20 @@ const Navbar = () => {
                         to="/"
                         style={{
                             textDecoration: "none",
-                            color: "#3A1212",
-                            borderBottom: "3px solid #FF2625",
+                            color: "#000000",
+                            borderBottom: "3px solid #2C2821",
+                            fontWeight: "bold",
                         }}
                     >
                         Home
                     </Link>
                     <a
                         href="#exercises"
-                        style={{ textDecoration: "none", color: "#3A1212" }}
+                        style={{
+                            textDecoration: "none",
+                            color: "#000000",
+                            fontWeight: "bold",
+                        }}
                     >
                         Exercises
                     </a>

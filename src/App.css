@@ -1,6 +1,6 @@
 body {
-    font-family: "Josefin Sans";
-    background-color: #fffafb;
+    font-family: "Cormorant Garamond", serif;
+    background-color: #bfd5d9;
 }
 
 * {
@@ -9,36 +9,29 @@ body {
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
+.MuiBox-root {
+    max-width: 1200px;
 }
 
-.right-arrow,
-.left-arrow {
-    cursor: pointer;
-    background: transparent;
-    outline: none;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ff2625;
-    font-size: 25px;
-    border-radius: 4px;
-    position: absolute;
-    bottom: -20px;
-    right: 80px;
+.explore-button {
+    border: 1px solid #937a59;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000000;
+    margin: auto;
+    padding: 15px;
+    border-radius: 20px;
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
+    width: 200px;
+    background: transparent;
+    text-transform: uppercase;
+    font-family: "Cormorant Garamond";
 }
 
-.right-arrow {
-    right: 140px;
-}
-
-.right-arrow:hover,
-.left-arrow:hover {
-    transform: scale(1.3, 1.3);
+.explore-button:hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
 }
 
 .react-horizontal-scrolling-menu--wrapper {
@@ -53,20 +46,17 @@ body {
 }
 
 .hero-banner-img {
-    position: absolute;
-    right: 40px;
-    top: 0px;
-    width: 650px;
-    height: 870px;
-    margin-top: -330px;
+    width: 700px;
+    height: 450px;
+    border-radius: 30px;
 }
 
 .exercise-card {
     width: 400px;
     height: 445px;
-    background: #fff;
-    border-top: 4px solid #ff2625;
-    border-bottom-left-radius: 20px;
+    background: #f4ebd9;
+    border-top: 4px solid #f4ebd9;
+    border-bottom-left-radius: 15px;
     text-decoration: none;
     display: flex;
     justify-content: space-between;

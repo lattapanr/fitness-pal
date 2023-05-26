@@ -1,46 +1,65 @@
-import { Box, Stack, Typography, Button } from "@mui/material";
+import {
+    Box,
+    Typography,
+    Button,
+    createTheme,
+    ThemeProvider,
+} from "@mui/material";
 
 import HeroBannerImg from "../assets/images/banner.png";
 
 const HeroBanner = () => {
+    const theme = createTheme({
+        typography: {
+            fontFamily: ["Gilda Display", "serif"].join(","),
+        },
+    });
+
     return (
-        <Box
-            sx={{ mt: { lg: "212px", xs: "70px" }, ml: { sm: "50px" } }}
-            position="relative"
-            p="20px"
-        >
-            <Typography color="#FF2025" fontWeight="600" fontSize="26px">
-                Fitness Club
-            </Typography>
-            <Typography
-                fontWeight={700}
-                sx={{ fontSize: { lg: "44px", xs: "40px" } }}
-                mb="23px"
-                mt="30px"
-            >
-                Sweat, Smile
-                <br /> and Repeat
-            </Typography>
-            <Typography fontSize="22px" lineHeight="35px" mb={4}>
-                Check out the most effective exercises
-            </Typography>
-            <Button
-                variant="contained"
-                color="error"
-                href="#exercises"
-                sx={{ backgroundColor: "FF2625", padding: "15px" }}
-            >
-                Explore Exercises
-            </Button>
+        <Box display="flex" flexDirection="column" mt="90px" sx={{ width: 1 }}>
+            <Box display="flex" justifyContent="space-between">
+                <Box display="flex" flexDirection="column">
+                    <ThemeProvider theme={theme}>
+                        <Typography
+                            color="#000000"
+                            fontWeight="600"
+                            fontSize="65px"
+                        >
+                            Fitness Pal
+                        </Typography>
+                    </ThemeProvider>
+
+                    <Typography
+                        fontWeight={700}
+                        sx={{
+                            fontSize: { lg: "24px", xs: "20px" },
+                            fontStyle: "italic",
+                        }}
+                        mb="50px"
+                        mt="50px"
+                    >
+                        Unleash Your Inner Strength, <br />
+                        Explore the Exercise Spectrum! <br />
+                        Discover a World of Moves for a Fitter You
+                    </Typography>
+                    <button className="explore-button" href="#exercises">
+                        Explore Exercises
+                    </button>
+                </Box>
+                <img
+                    src={HeroBannerImg}
+                    alt="banner"
+                    className="hero-banner-img"
+                />
+            </Box>
             <Typography
                 fontWeight={600}
-                color="#FF2625"
+                color="#937a59"
                 sx={{ opacity: 0.1, display: { lg: "block", xs: "none" } }}
                 fontSize="200px"
             >
                 Exercise
             </Typography>
-            <img src={HeroBannerImg} alt="banner" className="hero-banner-img" />
         </Box>
     );
 };
