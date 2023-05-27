@@ -1,4 +1,5 @@
-body {
+body,
+footer {
   font-family: "Cormorant Garamond", serif;
   background-color: #bfd5d9;
 }
@@ -9,13 +10,22 @@ body {
   box-sizing: border-box;
 }
 
-.MuiBox-root {
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+#root {
+  width: 90%;
   max-width: 1200px;
+  margin: auto;
 }
 
 .explore-button {
   border: 2px solid #937a59;
-  /* font-weight: bold; */
+  font-weight: bold;
   font-size: 18px;
   color: #000000;
   font-style: italic;
@@ -35,15 +45,6 @@ body {
   cursor: pointer;
 }
 
-/* .exercise-text {
-  color: #937a59;
-  font-weight: 600;
-  font-size: 150px;
-  position: absolute;
-  top: 550px;
-  right: 0;
-} */
-
 .react-horizontal-scrolling-menu--wrapper {
   width: 100%;
   display: flex;
@@ -56,14 +57,12 @@ body {
 }
 
 .hero-banner-img {
-  width: 700px;
-  height: 450px;
-  border-radius: 30px;
+  display: none;
 }
 
 .exercise-card {
-  width: 400px;
-  height: 445px;
+  width: 300px;
+  height: 450px;
   background: #f4ebd9;
   border-top: 4px solid #f4ebd9;
   border-bottom-left-radius: 15px;
@@ -91,8 +90,8 @@ body {
 }
 
 .search-btn:hover {
-  color: #ff2625 !important;
-  border: 1px solid #ff2625 !important;
+  color: #2c2821 !important;
+  border: 1px solid #2c2821 !important;
 }
 
 .exercise-video {
@@ -108,11 +107,24 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 1200px) {
-  .MuiBox-root {
-    max-width: 1000px;
+@media screen and (min-width: 900px) {
+  .hero-banner-img {
+    display: block;
+    width: 430px;
+    height: 300px;
+    border-radius: 30px;
   }
+}
 
+@media screen and (min-width: 1000px) {
+  .hero-banner-img {
+    width: 550px;
+    height: 350px;
+    border-radius: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .detail-image {
     width: 300px;
     height: 300px;
@@ -127,23 +139,14 @@ body {
     position: static !important;
   }
 
-  .hero-banner-img {
-    width: 600px;
-    height: 400px;
-  }
-
-  .exercise-card {
-    width: 320px;
-  }
-
   .exercise-video {
     width: 320px;
     height: 300px;
   }
 }
-
+/* 
 @media screen and (max-width: 400px) {
   .exercise-card {
     width: 280px;
   }
-}
+} */

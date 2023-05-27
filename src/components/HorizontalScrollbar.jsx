@@ -9,7 +9,13 @@ import ExerciseCard from "./ExerciseCard";
 import Tabs, { tabsClasses } from "@mui/material/Tabs";
 import { useState } from "react";
 
-const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, bodyParts }) => {
+const HorizontalScrollbar = ({
+  data,
+  bodyPart,
+  setBodyPart,
+  bodyParts,
+  icon,
+}) => {
   const [value, setValue] = useState(0);
 
   const handleChange = (newValue) => {
@@ -28,7 +34,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, bodyParts }) => {
         },
       }}
     >
-      {data.map((item) => (
+      {data.map((item, index) => (
         <Box
           key={item.id || item}
           itemId={item.id || item}
@@ -40,6 +46,8 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, bodyParts }) => {
               item={item}
               setBodyPart={setBodyPart}
               bodyPart={bodyPart}
+              icon={icon}
+              index={index}
             />
           ) : (
             <ExerciseCard exercise={item} />

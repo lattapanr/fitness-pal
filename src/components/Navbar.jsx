@@ -1,15 +1,13 @@
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 
-import Logo from "../assets/images/Logo.png";
-
 const Navbar = () => {
   return (
     <header>
       <Stack
         sx={{
           display: "flex",
-          alignItems: { sm: "flex-start", xs: "center" },
+          alignItems: { md: "flex-start", xs: "center" },
           gap: { sm: "122px", xs: "40px" },
           mt: { sm: "100px", xs: "30px" },
           justifyContent: "none",

@@ -14,20 +14,47 @@ const HeroBanner = () => {
   });
 
   return (
-    <Box display="flex" flexDirection="column" mt="50px" sx={{ width: 1 }}>
-      <Box display="flex" justifyContent="space-between">
+    <Box
+      display="flex"
+      flexDirection="column"
+      mt="50px"
+      sx={{
+        width: 1,
+        alignItems: {
+          xs: "center",
+          md: "flex-start",
+        },
+      }}
+    >
+      <Box
+        display="flex"
+        sx={{
+          width: 1,
+          alignItems: {
+            xs: "center",
+            md: "flex-start",
+          },
+          justifyContent: { xs: "center", md: "space-between" },
+        }}
+      >
         <Box display="flex" flexDirection="column">
           <ThemeProvider theme={theme}>
-            <Typography color="#000000" fontWeight="600" fontSize="75px">
+            <Typography
+              color="#000000"
+              fontWeight="600"
+              sx={{
+                fontSize: { md: "75px", sm: "70px", xs: "50px" },
+              }}
+            >
               Fitness Pal
             </Typography>
           </ThemeProvider>
 
           <Typography
             fontWeight={700}
+            fontStyle="italic"
             sx={{
-              fontSize: { lg: "24px", xs: "20px" },
-              fontStyle: "italic",
+              fontSize: { lg: "24px", sm: "20px", xs: "16px" },
             }}
             mb="50px"
             mt="50px"
@@ -47,9 +74,8 @@ const HeroBanner = () => {
         color="#2c2821"
         sx={{
           opacity: "0.1",
-          display: { md: "block", xs: "none" },
-          fontSize: "200px",
           lineHeight: "250px",
+          fontSize: { sm: "200px", xs: "105px" },
         }}
       >
         Exercise

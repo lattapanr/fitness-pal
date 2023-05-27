@@ -1,10 +1,13 @@
+// packages
 import { Box, Pagination, Stack, Typography } from "@mui/material";
+
+// hooks
 import { useEffect, useState } from "react";
 
-//utilities
+// utilities
 import { exerciseOptions, fetchData } from "../utilities/fetchData";
 
-//components
+// components
 import ExerciseCard from "./ExerciseCard";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
@@ -46,6 +49,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     };
     fetchExercisesData();
   }, [bodyPart]);
+
   return (
     <Box id="exercises" sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
       <Typography variant="h3" mb="46px">
@@ -61,7 +65,6 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           <ExerciseCard key={idx} exercise={exercise} />
         ))}
       </Stack>
-
       <Stack mt="100px" alignItems="center">
         {exercises.length > 9 && (
           <Pagination

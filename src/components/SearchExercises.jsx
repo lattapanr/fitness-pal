@@ -1,8 +1,13 @@
+// hooks
 import { useEffect, useState } from "react";
 
+// packages
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
+
+// utilities
 import { exerciseOptions, fetchData } from "../utilities/fetchData";
 
+// components
 import HorizontalScrollbar from "./HorizontalScrollbar";
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
@@ -47,8 +52,8 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   return (
     <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
       <Typography
-        fontWeight={700}
-        sx={{ fontSize: { lg: "44px", xs: "30px" } }}
+        fontWeight={400}
+        sx={{ fontSize: { md: "55px", xs: "35px" } }}
         mb="50px"
         textAlign="center"
       >
@@ -63,9 +68,8 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
               border: "none",
               borderRadius: "4px",
             },
-            width: { lg: "800px", md: "350px" },
-            backgroundColor: "#FFF",
-            borderRadius: "40px",
+            width: { md: "600px", sm: "400px", xs: "270px" },
+            backgroundColor: "#fff",
           }}
           height="76px"
           value={search}
@@ -76,8 +80,8 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         <Button
           className="search-btn"
           sx={{
-            backgroundColor: "#FF2625",
-            color: "#FFF",
+            backgroundColor: "#2c2821",
+            color: "#fff",
             textTransform: "none",
             width: {
               lg: "175px",
@@ -85,7 +89,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
             },
             fontSize: {
               lg: "20px",
-              xs: "14px",
+              xs: "18px",
             },
             height: "56px",
             position: "absolute",

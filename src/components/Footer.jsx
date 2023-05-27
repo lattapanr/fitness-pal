@@ -1,27 +1,30 @@
-import { Box, Stack, Typography } from "@mui/material";
-import Logo from "../assets/images/Logo-1.png";
+import { Box, Typography, createTheme, ThemeProvider } from "@mui/material";
 
-const Footer = () => (
-  <Box mt="80px" bgcolor="#FFF3F4">
-    <Stack
-      gap="40px"
-      sx={{ alignItems: "center" }}
-      flexWrap="wrap"
-      px="40px"
-      pt="24px"
-    >
-      <img src={Logo} alt="logo" style={{ width: "200px", height: "41px" }} />
-    </Stack>
-    <Typography
-      variant="h5"
-      sx={{ fontSize: { lg: "28px", xs: "20px" } }}
-      mt="41px"
-      textAlign="center"
-      pb="40px"
-    >
-      Made with ❤️ by JavaScript Mastery
-    </Typography>
-  </Box>
-);
+const Footer = () => {
+  const theme = createTheme({
+    typography: {
+      fontFamily: ["Cormorant Garamond", "serif"].join(","),
+    },
+  });
+
+  return (
+    <Box mt="80px" borderTop="2px solid #2c2821">
+      <ThemeProvider theme={theme}>
+        <Typography
+          variant="h5"
+          sx={{ fontSize: { md: "22px", xs: "16px" } }}
+          mt="20px"
+          textAlign="center"
+          pb="20px"
+        >
+          Designed and developed with passion by{" "}
+          <span style={{ fontStyle: "italic" }}>
+            <a href="https://github.com/lattapanr">Lattapan</a>
+          </span>
+        </Typography>
+      </ThemeProvider>
+    </Box>
+  );
+};
 
 export default Footer;
