@@ -1,134 +1,149 @@
 body {
-    font-family: "Cormorant Garamond", serif;
-    background-color: #bfd5d9;
+  font-family: "Cormorant Garamond", serif;
+  background-color: #bfd5d9;
 }
 
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 .MuiBox-root {
-    max-width: 1200px;
+  max-width: 1200px;
 }
 
 .explore-button {
-    border: 1px solid #937a59;
-    font-weight: bold;
-    font-size: 16px;
-    color: #000000;
-    margin: auto;
-    padding: 15px;
-    border-radius: 20px;
-    transform: scale(1, 1);
-    transition: 0.3s all ease-in-out;
-    width: 200px;
-    background: transparent;
-    text-transform: uppercase;
-    font-family: "Cormorant Garamond";
+  border: 2px solid #937a59;
+  /* font-weight: bold; */
+  font-size: 18px;
+  color: #000000;
+  font-style: italic;
+  margin: auto;
+  padding: 15px;
+  border-radius: 20px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+  width: 210px;
+  background: transparent;
+  text-transform: uppercase;
+  font-family: "Cormorant Garamond";
 }
 
 .explore-button:hover {
-    transform: scale(1.1, 1.1);
-    cursor: pointer;
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
 }
 
+/* .exercise-text {
+  color: #937a59;
+  font-weight: 600;
+  font-size: 150px;
+  position: absolute;
+  top: 550px;
+  right: 0;
+} */
+
 .react-horizontal-scrolling-menu--wrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .detail-image {
-    width: 729px;
-    height: 742px;
+  width: 729px;
+  height: 742px;
 }
 
 .hero-banner-img {
-    width: 700px;
-    height: 450px;
-    border-radius: 30px;
+  width: 700px;
+  height: 450px;
+  border-radius: 30px;
 }
 
 .exercise-card {
-    width: 400px;
-    height: 445px;
-    background: #f4ebd9;
-    border-top: 4px solid #f4ebd9;
-    border-bottom-left-radius: 15px;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding-bottom: 10px;
-    transform: scale(1, 1);
-    transition: 0.3s all ease-in-out;
+  width: 400px;
+  height: 445px;
+  background: #f4ebd9;
+  border-top: 4px solid #f4ebd9;
+  border-bottom-left-radius: 15px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 10px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
 }
 
 .exercise-card img {
-    height: 326px;
+  height: 326px;
 }
 
 .bodyPart-card {
-    transform: scale(1, 1);
-    transition: 0.3s all ease-in-out;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
 }
 
 .exercise-card:hover,
 .bodyPart-card:hover {
-    transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
 }
 
 .search-btn:hover {
-    color: #ff2625 !important;
-    border: 1px solid #ff2625 !important;
+  color: #ff2625 !important;
+  border: 1px solid #ff2625 !important;
 }
 
 .exercise-video {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 387px;
-    height: 381px;
-    text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 387px;
+  height: 381px;
+  text-decoration: none;
 }
 
 .css-1aquho2-MuiTabs-indicator {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 1200px) {
-    .detail-image {
-        width: 300px;
-        height: 300px;
-    }
+  .MuiBox-root {
+    max-width: 1000px;
+  }
 
-    .react-horizontal-scrolling-menu--scroll-container {
-        width: 500px;
-    }
+  .detail-image {
+    width: 300px;
+    height: 300px;
+  }
 
-    .left-arrow,
-    .right-arrow {
-        position: static !important;
-    }
+  .react-horizontal-scrolling-menu--scroll-container {
+    width: 500px;
+  }
 
-    .hero-banner-img {
-        display: none;
-    }
+  .left-arrow,
+  .right-arrow {
+    position: static !important;
+  }
 
-    .exercise-card {
-        width: 320px;
-    }
+  .hero-banner-img {
+    width: 600px;
+    height: 400px;
+  }
 
-    .exercise-video {
-        width: 320px;
-        height: 300px;
-    }
+  .exercise-card {
+    width: 320px;
+  }
+
+  .exercise-video {
+    width: 320px;
+    height: 300px;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .exercise-card {
-        width: 280px;
-    }
+  .exercise-card {
+    width: 280px;
+  }
 }
