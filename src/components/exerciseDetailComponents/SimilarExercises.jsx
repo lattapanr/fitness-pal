@@ -49,10 +49,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
         </span>{" "}
         exercises
       </Typography>
-      <Stack
-        direction="row"
-        sx={{ p: 2, position: "relative", whiteSpace: "normal" }}
-      >
+      <Stack direction="row" sx={{ p: 2, position: "", whiteSpace: "normal" }}>
         {equipmentExercises.length !== 0 ? (
           // Render the HorizontalScrollbar component with the equipmentExercises data
           <HorizontalScrollbar data={equipmentExercises} />
