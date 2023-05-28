@@ -58,10 +58,10 @@ const BodyParts = ({ item, setBodyPart, bodyPart, image, index }) => {
       />
 
       <Typography
-        fontSize="24px"
         fontWeight="bold"
         color="#3A1212"
         textTransform="capitalize"
+        sx={{ fontSize: { md: "24px", xs: "16px" } }}
       >
         {item}
       </Typography>

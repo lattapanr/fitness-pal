@@ -39,7 +39,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
       >
         <Box display="flex" gap="60px">
           {/* Map through the exerciseVideos array and render a video link for each item */}
-          {exerciseVideos?.(0, 6).map((item, idx) => (
+          {exerciseVideos?.slice(0, 6).map((item, idx) => (
             <a
               key={idx}
               className="exercise-video"
