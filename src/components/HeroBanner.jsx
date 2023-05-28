@@ -1,9 +1,7 @@
+// MUI components
 import { Box, Typography, createTheme, ThemeProvider } from "@mui/material";
 
-//icon
-import { WiSnowflakeCold } from "react-icons/wi";
-
-//image
+// image
 import HeroBannerImg from "../assets/images/banner.png";
 
 const HeroBanner = () => {

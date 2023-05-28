@@ -1,4 +1,7 @@
+// MUI components
 import { Stack } from "@mui/material";
+
+// React router
 import { Link } from "react-router-dom";
 
 const Navbar = () => {

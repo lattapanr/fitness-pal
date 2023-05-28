@@ -1,13 +1,13 @@
 // hooks
 import { useEffect, useState } from "react";
 
-// packages
+// MUI components
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 
 // utilities
 import { exerciseOptions, fetchData } from "../utilities/fetchData";
 
-// components
+// local components
 import HorizontalScrollbar from "./HorizontalScrollbar";
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
@@ -17,11 +17,12 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
   useEffect(() => {
     const fetchExercisesData = async () => {
+      // Fetch the list of body parts from the API
       const bodyPartsData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
         exerciseOptions
       );
-
+      // Set the body parts data including the "all" option
       setBodyParts(["all", ...bodyPartsData]);
     };
 
@@ -30,11 +31,12 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
   const handleSearch = async () => {
     if (search) {
+      // Fetch all exercises from the API
       const exercisesData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises",
         exerciseOptions
       );
-
+      // Filter the exercises based on the search query
       const searchedExercises = exercisesData.filter(
         (item) =>
           item.name.toLowerCase().includes(search) ||
@@ -44,11 +46,21 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       );
 
       window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
-
+      // Reset the search input and update the exercises list
       setSearch("");
       setExercises(searchedExercises);
     }
   };
+
+  {
+    /* Event handler for key press */
+  }
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+
   return (
     <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
       <Typography
@@ -76,6 +88,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder="Search Exercises"
           type="text"
+          onKeyDown={handleKeyPress}
         />
         <Button
           className="search-btn"
@@ -102,6 +115,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       </Box>
 
       <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
+        {/* Render HorizontalScrollbar component with bodyParts data */}
         <HorizontalScrollbar
           data={bodyParts}
           bodyParts

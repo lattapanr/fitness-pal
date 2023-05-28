@@ -1,4 +1,7 @@
+// MUI component
 import { Stack } from "@mui/material";
+
+// React package
 import { InfinitySpin } from "react-loader-spinner";
 
 const Loader = () => {

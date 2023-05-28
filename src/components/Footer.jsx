@@ -1,9 +1,10 @@
+// MUI components
 import { Box, Typography, createTheme, ThemeProvider } from "@mui/material";
 
 const Footer = () => {
   const theme = createTheme({
     typography: {
-      fontFamily: ["Cormorant Garamond", "serif"].join(","),
+      fontFamily: ["Playfair", "serif"].join(","),
     },
   });
 
@@ -12,7 +13,7 @@ const Footer = () => {
       <ThemeProvider theme={theme}>
         <Typography
           variant="h5"
-          sx={{ fontSize: { md: "22px", xs: "16px" } }}
+          sx={{ fontSize: { md: "20px", xs: "16px" } }}
           mt="20px"
           textAlign="center"
           pb="20px"

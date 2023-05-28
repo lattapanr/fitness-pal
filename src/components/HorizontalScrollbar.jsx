@@ -1,12 +1,12 @@
-//packages
+// MUI components
 import { Box } from "@mui/material";
+import Tabs, { tabsClasses } from "@mui/material/Tabs";
 
-//components
+// local components
 import BodyPart from "./BodyPart";
 import ExerciseCard from "./ExerciseCard";
 
-//tab component
-import Tabs, { tabsClasses } from "@mui/material/Tabs";
+// hook
 import { useState } from "react";
 
 const HorizontalScrollbar = ({
@@ -14,7 +14,7 @@ const HorizontalScrollbar = ({
   bodyPart,
   setBodyPart,
   bodyParts,
-  icon,
+  image,
 }) => {
   const [value, setValue] = useState(0);
 
@@ -40,13 +40,15 @@ const HorizontalScrollbar = ({
           itemId={item.id || item}
           title={item.id || item}
           m="0 40px"
+          whiteSpace="normal"
         >
+          {/* Render BodyPart component if bodyParts prop is true, otherwise render ExerciseCard */}
           {bodyParts ? (
             <BodyPart
               item={item}
               setBodyPart={setBodyPart}
               bodyPart={bodyPart}
-              icon={icon}
+              image={image}
               index={index}
             />
           ) : (

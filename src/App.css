@@ -1,6 +1,5 @@
 body,
 footer {
-  font-family: "Cormorant Garamond", serif;
   background-color: #bfd5d9;
 }
 
@@ -45,26 +44,27 @@ a:active {
   cursor: pointer;
 }
 
-.react-horizontal-scrolling-menu--wrapper {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .detail-image {
-  width: 729px;
-  height: 742px;
+  width: 300px;
+  height: 300px;
 }
 
 .hero-banner-img {
   display: none;
 }
 
+.body-img {
+  width: 100%;
+  height: 100%;
+  max-height: 245px;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
 .exercise-card {
   width: 300px;
   height: 450px;
-  background: #f4ebd9;
-  border-top: 4px solid #f4ebd9;
+  border: 1px solid #2c2821;
   border-bottom-left-radius: 15px;
   text-decoration: none;
   display: flex;
@@ -86,7 +86,7 @@ a:active {
 
 .exercise-card:hover,
 .bodyPart-card:hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.06, 1.06);
 }
 
 .search-btn:hover {
@@ -97,9 +97,9 @@ a:active {
 .exercise-video {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: 387px;
-  height: 381px;
+  gap: 10px;
+  width: 320px;
+  height: 300px;
   text-decoration: none;
 }
 
@@ -114,6 +114,15 @@ a:active {
     height: 300px;
     border-radius: 30px;
   }
+
+  .detail-image {
+    width: 550px;
+    height: 550px;
+  }
+
+  .exercise-video {
+    width: 400px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -123,30 +132,3 @@ a:active {
     border-radius: 30px;
   }
 }
-
-@media screen and (max-width: 1200px) {
-  .detail-image {
-    width: 300px;
-    height: 300px;
-  }
-
-  .react-horizontal-scrolling-menu--scroll-container {
-    width: 500px;
-  }
-
-  .left-arrow,
-  .right-arrow {
-    position: static !important;
-  }
-
-  .exercise-video {
-    width: 320px;
-    height: 300px;
-  }
-}
-/* 
-@media screen and (max-width: 400px) {
-  .exercise-card {
-    width: 280px;
-  }
-} */

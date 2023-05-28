@@ -1,18 +1,18 @@
-// packages
-import { Box } from "@mui/material";
+// MUI components
+import { Box, createTheme, ThemeProvider } from "@mui/material";
 
 // hooks
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-//utility
+// utilities
 import {
   exerciseOptions,
   youtubeOptions,
   fetchData,
 } from "../utilities/fetchData";
 
-//components
+// local components
 import Detail from "../components/exerciseDetailComponents/Detail";
 import ExerciseVideos from "../components/exerciseDetailComponents/ExerciseVideos";
 import SimilarExercises from "../components/exerciseDetailComponents/SimilarExercises";
@@ -59,15 +59,25 @@ const ExerciseDetail = () => {
     fetchExercisesData();
   }, [id]);
 
+  const theme = createTheme({
+    typography: {
+      fontFamily: ["Playfair", "serif"].join(","),
+    },
+  });
+
   return (
     <Box>
-      <Detail exerciseDetail={exerciseDetail} />
-      <ExerciseVideos exerciseVideos={exerciseVideos} />
-      <SimilarExercises
-        targetMuscleExercises={targetMuscleExercises}
-        equipmentExercises={equipmentExercises}
-        name={exerciseDetail.name}
-      />
+      <ThemeProvider theme={theme}>
+        <Detail exerciseDetail={exerciseDetail} />
+        <ExerciseVideos
+          exerciseVideos={exerciseVideos}
+          name={exerciseDetail.name}
+        />
+        <SimilarExercises
+          targetMuscleExercises={targetMuscleExercises}
+          equipmentExercises={equipmentExercises}
+        />
+      </ThemeProvider>
     </Box>
   );
 };

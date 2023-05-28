@@ -1,4 +1,7 @@
+// MUI components
 import { Button, Stack, Typography } from "@mui/material";
+
+// router
 import { Link } from "react-router-dom";
 
 const ExerciseCard = ({ exercise }) => {
@@ -8,11 +11,13 @@ const ExerciseCard = ({ exercise }) => {
       <Stack direction="row">
         <Button
           sx={{
+            mt: "10px",
             ml: "21px",
-            color: "#fff",
-            backgroundColor: "#ffa9A9",
+            color: "#000",
+            background: "#f4ebd9",
             fontSize: "14px",
-            borderRadius: "20px",
+            border: "1px solid #2c2821",
+            borderRadius: "10px",
             textTransform: "capitalize",
           }}
         >
@@ -21,11 +26,13 @@ const ExerciseCard = ({ exercise }) => {
 
         <Button
           sx={{
+            mt: "10px",
             ml: "21px",
-            color: "#fff",
-            backgroundColor: "#fcc757",
+            color: "#000",
+            background: "#f4ebd9",
             fontSize: "14px",
-            borderRadius: "20px",
+            border: "1px solid #2c2821",
+            borderRadius: "10px",
             textTransform: "capitalize",
           }}
         >

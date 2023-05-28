@@ -1,9 +1,11 @@
+// MUI components
 import { Box, Stack, Typography } from "@mui/material";
+
+// local components
 import HorizontalScrollbar from "../HorizontalScrollbar";
 import Loader from "./Loader";
 
 const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
-  console.log(targetMuscleExercises);
   return (
     <Box sx={{ mt: { lg: "100px", xs: "0px" } }}>
       <Typography
@@ -13,14 +15,20 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
         mb="33px"
       >
         Similar{" "}
-        <span style={{ color: "#FF2625", textTransform: "capitalize" }}>
+        <span style={{ color: "#937a59", textTransform: "capitalize" }}>
           Target Muscle
         </span>{" "}
         exercises
       </Typography>
       <Stack direction="row" sx={{ p: 2, position: "relative" }}>
         {targetMuscleExercises.length !== 0 ? (
-          <HorizontalScrollbar data={targetMuscleExercises} />
+          // Render the HorizontalScrollbar component with the targetMuscleExercises data
+          <HorizontalScrollbar
+            data={targetMuscleExercises}
+            sx={{
+              fontSize: { lg: "28px", xs: "18px" },
+            }}
+          />
         ) : (
           <Loader />
         )}
@@ -36,13 +44,17 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
         mb="33px"
       >
         Similar{" "}
-        <span style={{ color: "#FF2625", textTransform: "capitalize" }}>
+        <span style={{ color: "#937a59", textTransform: "capitalize" }}>
           Equipment
         </span>{" "}
         exercises
       </Typography>
-      <Stack direction="row" sx={{ p: 2, position: "relative" }}>
+      <Stack
+        direction="row"
+        sx={{ p: 2, position: "relative", whiteSpace: "normal" }}
+      >
         {equipmentExercises.length !== 0 ? (
+          // Render the HorizontalScrollbar component with the equipmentExercises data
           <HorizontalScrollbar data={equipmentExercises} />
         ) : (
           <Loader />

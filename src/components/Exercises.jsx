@@ -1,4 +1,4 @@
-// packages
+// MUI components
 import { Box, Pagination, Stack, Typography } from "@mui/material";
 
 // hooks
@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 // utilities
 import { exerciseOptions, fetchData } from "../utilities/fetchData";
 
-// components
+// local components
 import ExerciseCard from "./ExerciseCard";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
@@ -19,6 +19,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
   const indexOfFirstExercise = indexOfLastExercise - exercisePerPage;
 
+  // Get the exercises to be displayed on the current page
   const currentExercises = exercises.slice(
     indexOfFirstExercise,
     indexOfLastExercise
@@ -31,6 +32,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   };
 
   useEffect(() => {
+    // Fetch exercises data based on the selected body part
     const fetchExercisesData = async () => {
       let exercisesData = [];
 
@@ -45,6 +47,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           exerciseOptions
         );
       }
+      // Set the fetched exercises data
       setExercises(exercisesData);
     };
     fetchExercisesData();
@@ -61,11 +64,13 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         flexWrap="wrap"
         justifyContent="center"
       >
+        {/* Render ExerciseCard component for each exercise */}
         {currentExercises.map((exercise, idx) => (
           <ExerciseCard key={idx} exercise={exercise} />
         ))}
       </Stack>
       <Stack mt="100px" alignItems="center">
+        {/* Render pagination component if there are more than 9 exercises */}
         {exercises.length > 9 && (
           <Pagination
             color="standard"

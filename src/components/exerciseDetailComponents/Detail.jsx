@@ -1,6 +1,7 @@
+// MUI components
 import { Typography, Stack, Button } from "@mui/material";
 
-//images
+//icons
 import BodyPartImage from "../../assets/icons/body-part.png";
 import TargetImage from "../../assets/icons/target.png";
 import EquipmentImage from "../../assets/icons/equipment.png";
@@ -25,19 +26,26 @@ const Detail = ({ exerciseDetail }) => {
 
   return (
     <Stack
+      borderTop="2px solid #2c2821"
+      mt="30px"
+      mb="50px"
       gap="60px"
       sx={{
-        flexDirection: { lg: "row" },
+        flexDirection: { md: "row" },
         p: "20px",
         alignItems: "center",
       }}
     >
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: "35px", xs: "20px" } }}>
-        <Typography variant="h3" textTransform="capitalize">
+        <Typography
+          variant="h3"
+          textTransform="capitalize"
+          sx={{ fontSize: { md: "42px", xs: "36px" } }}
+        >
           {name}
         </Typography>
-        <Typography variant="h6">
+        <Typography variant="h6" sx={{ fontSize: { md: "20px", xs: "18px" } }}>
           Exercises keep you strong.{" "}
           <span style={{ textTransform: "capitalize" }}>{name}</span> is one of
           the best exercises to target your {target}. It will help you improve
