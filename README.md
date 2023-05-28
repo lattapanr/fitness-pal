@@ -24,8 +24,11 @@ The Fitness App is a web application that provides a collection of exercises and
 1. Clone the repository: `git clone https://github.com/your-username/fitness-app.git`
 2. Navigate to the project directory: `cd fitness-app`
 3. Install dependencies: `npm install`
-4. Start the development server: `npm start`
-5. Open your browser and visit: `http://localhost:3000`
+4. Create a .env file in the root directory of the project.
+5. Add your API key to the .env file.
+6. Save the .env file: `API_KEY=YOUR_API_KEY`
+7. Start the development server: `npm start`
+8. Open your browser and visit: `http://localhost:3000`
 
 ## Usage
 - Search for exercises using the search bar or browse through the exercise categories.
