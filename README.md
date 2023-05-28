@@ -1,7 +1,5 @@
 # Fitness Pal
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
 ## Description
 The Fitness App is a web application that provides a collection of exercises and workout routines. Users can search for exercises, view exercise details, watch exercise videos, and discover similar exercises. The app is designed to help users with their fitness goals and provide them with valuable exercise information.
 
@@ -37,10 +35,7 @@ The Fitness App is a web application that provides a collection of exercises and
 - Enjoy the app and use it to enhance your fitness journey!
 
 ## Contributing
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Contributions are welcome! If you find any issues or have suggestions for improvements, ple
 
 ## Acknowledgements
 - [ExerciseDB](https://exercisedb.p.rapidapi.com/): API providing exercise data
