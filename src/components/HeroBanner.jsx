@@ -2,7 +2,7 @@
 import { Box, Typography, createTheme, ThemeProvider } from "@mui/material";
 
 // image
-import HeroBannerImg from "../assets/images/banner.png";
+import HeroBannerImg from "../assets/images/banner.jpg";
 
 const HeroBanner = () => {
     const theme = createTheme({
