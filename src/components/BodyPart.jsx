@@ -15,58 +15,58 @@ import UpperLegs from "../assets/images/bodyParts/upperLegs.jpg";
 import Waist from "../assets/images/bodyParts/waist.jpg";
 
 const BodyParts = ({ item, setBodyPart, bodyPart, image, index }) => {
-  const images = [
-    BodyPart,
-    Back,
-    Cardio,
-    Chest,
-    LowerArms,
-    LowerLegs,
-    Neck,
-    Shoulders,
-    UpperArms,
-    UpperLegs,
-    Waist,
-  ];
+    const images = [
+        BodyPart,
+        Back,
+        Cardio,
+        Chest,
+        LowerArms,
+        LowerLegs,
+        Neck,
+        Shoulders,
+        UpperArms,
+        UpperLegs,
+        Waist,
+    ];
 
-  return (
-    <Stack
-      type="button"
-      alignItems="center"
-      justifyContent="center"
-      className="bodyPart-card"
-      sx={{
-        borderBottom: bodyPart === item ? "4px solid #2c2821" : "",
+    return (
+        <Stack
+            type="button"
+            alignItems="center"
+            justifyContent="center"
+            className="bodyPart-card"
+            sx={{
+                borderBottom: bodyPart === item ? "4px solid #2c2821" : "",
 
-        backgroundColor: "#fff",
-        borderBottomLeftRadius: "20px",
-        width: { md: "270px", xs: "200px" },
-        height: { md: "280px", xs: "210px" },
-        cursor: "pointer",
-      }}
-      onClick={() => {
-        // Call the setBodyPart function to update the selected body part
-        setBodyPart(item);
-        window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
-      }}
-    >
-      <img
-        className="body-img"
-        key={item}
-        src={images[index % images.length]}
-        alt={image}
-      />
+                backgroundColor: "#fff",
+                borderRadius: "4px",
+                width: { md: "270px", xs: "200px" },
+                height: { md: "280px", xs: "210px" },
+                cursor: "pointer",
+            }}
+            onClick={() => {
+                // Call the setBodyPart function to update the selected body part
+                setBodyPart(item);
+                window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
+            }}
+        >
+            <img
+                className="body-img"
+                key={item}
+                src={images[index % images.length]}
+                alt={image}
+            />
 
-      <Typography
-        fontWeight="bold"
-        color="#3A1212"
-        textTransform="capitalize"
-        sx={{ fontSize: { md: "24px", xs: "16px" } }}
-      >
-        {item}
-      </Typography>
-    </Stack>
-  );
+            <Typography
+                fontWeight="bold"
+                color="#3A1212"
+                textTransform="capitalize"
+                sx={{ fontSize: { md: "24px", xs: "16px" } }}
+            >
+                {item}
+            </Typography>
+        </Stack>
+    );
 };
 
 export default BodyParts;
