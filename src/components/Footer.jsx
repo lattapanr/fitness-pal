@@ -18,7 +18,7 @@ const Footer = () => {
           textAlign="center"
           pb="20px"
         >
-          Designed and developed with passion by{" "}
+          Developed by{" "}
           <span style={{ fontStyle: "italic" }}>
             <a href="https://github.com/lattapanr">Lattapan</a>
           </span>
