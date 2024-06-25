@@ -11,8 +11,8 @@ export const youtubeOptions = {
   method: "GET",
 
   headers: {
-    "X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
-    "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
+    "X-RapidAPI-Key": "974c4979damshe7dd8b9dfae5656p1c2a13jsn692f5dc1db2c",
+    "X-RapidAPI-Host": "youtube-search14.p.rapidapi.com",
   },
 };
 
