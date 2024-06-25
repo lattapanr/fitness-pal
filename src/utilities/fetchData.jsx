@@ -12,7 +12,7 @@ export const youtubeOptions = {
 
   headers: {
     "X-RapidAPI-Key": "974c4979damshe7dd8b9dfae5656p1c2a13jsn692f5dc1db2c",
-    "X-RapidAPI-Host": "youtube-search14.p.rapidapi.com",
+    "X-RapidAPI-Host": "youtube-v2.p.rapidapi.com",
   },
 };
 
