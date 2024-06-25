@@ -1,7 +1,7 @@
 # Fitness Pal
 
 ## Description
-The Fitness App is a web application that provides a collection of exercises and workout routines. Users can search for exercises, view exercise details, watch exercise videos, and discover similar exercises. The app is designed to help users with their fitness goals and provide them with valuable exercise information.
+Fitness Pal is a web application that provides a collection of exercises and workout routines. Users can search for exercises, view exercise details, watch exercise videos, and discover similar exercises. The app is designed to help users with their fitness goals and provide them with valuable exercise information.
 
 ## Features
 - Search exercises by name, target muscle, equipment, or body part

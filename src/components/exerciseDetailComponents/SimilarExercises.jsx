@@ -23,12 +23,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
       <Stack direction="row" sx={{ p: 2, position: "relative" }}>
         {targetMuscleExercises.length !== 0 ? (
           // Render the HorizontalScrollbar component with the targetMuscleExercises data
-          <HorizontalScrollbar
-            data={targetMuscleExercises}
-            sx={{
-              fontSize: { lg: "28px", xs: "18px" },
-            }}
-          />
+          <HorizontalScrollbar data={targetMuscleExercises} />
         ) : (
           <Loader />
         )}

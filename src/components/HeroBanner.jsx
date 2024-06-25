@@ -2,7 +2,7 @@
 import { Box, Typography, createTheme, ThemeProvider } from "@mui/material";
 
 // image
-import HeroBannerImg from "../assets/images/banner.png";
+import HeroBannerImg from "../assets/images/banner.jpg";
 
 const HeroBanner = () => {
   const theme = createTheme({
@@ -35,13 +35,26 @@ const HeroBanner = () => {
           justifyContent: { xs: "center", md: "space-between" },
         }}
       >
-        <Box display="flex" flexDirection="column">
+        <Box
+          display="flex"
+          flexDirection="column"
+          sx={{
+            alignItems: {
+              xs: "center",
+              md: "flex-start",
+            },
+          }}
+        >
           <ThemeProvider theme={theme}>
             <Typography
               color="#000000"
               fontWeight="600"
               sx={{
-                fontSize: { md: "75px", sm: "70px", xs: "50px" },
+                fontSize: {
+                  md: "75px",
+                  sm: "70px",
+                  xs: "50px",
+                },
               }}
             >
               Fitness Pal
@@ -61,9 +74,10 @@ const HeroBanner = () => {
             Explore the Exercise Spectrum! <br />
             Discover a World of Moves for a Fitter You
           </Typography>
-          <button className="explore-button" href="#exercises">
+
+          <a href="#exercises" className="explore-button">
             Explore Exercises
-          </button>
+          </a>
         </Box>
         <img src={HeroBannerImg} alt="banner" className="hero-banner-img" />
       </Box>

@@ -14,21 +14,21 @@ import UpperArms from "../assets/images/bodyParts/upperArms.jpg";
 import UpperLegs from "../assets/images/bodyParts/upperLegs.jpg";
 import Waist from "../assets/images/bodyParts/waist.jpg";
 
-const BodyParts = ({ item, setBodyPart, bodyPart, image, index }) => {
-  const images = [
-    BodyPart,
-    Back,
-    Cardio,
-    Chest,
-    LowerArms,
-    LowerLegs,
-    Neck,
-    Shoulders,
-    UpperArms,
-    UpperLegs,
-    Waist,
-  ];
+const images = [
+  BodyPart,
+  Back,
+  Cardio,
+  Chest,
+  LowerArms,
+  LowerLegs,
+  Neck,
+  Shoulders,
+  UpperArms,
+  UpperLegs,
+  Waist,
+];
 
+const BodyParts = ({ item, setBodyPart, bodyPart, image, index }) => {
   return (
     <Stack
       type="button"
@@ -39,7 +39,7 @@ const BodyParts = ({ item, setBodyPart, bodyPart, image, index }) => {
         borderBottom: bodyPart === item ? "4px solid #2c2821" : "",
 
         backgroundColor: "#fff",
-        borderBottomLeftRadius: "20px",
+        borderRadius: "4px",
         width: { md: "270px", xs: "200px" },
         height: { md: "280px", xs: "210px" },
         cursor: "pointer",

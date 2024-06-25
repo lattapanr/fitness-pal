@@ -8,43 +8,19 @@ const ExerciseCard = ({ exercise }) => {
   return (
     <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
       <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />
-      <Stack direction="row">
-        <Button
-          sx={{
-            mt: "10px",
-            ml: "21px",
-            color: "#000",
-            background: "#f4ebd9",
-            fontSize: "14px",
-            border: "1px solid #2c2821",
-            borderRadius: "10px",
-            textTransform: "capitalize",
-          }}
-        >
+      <Stack direction="row" gap="10px" ml="10px">
+        <Typography className="exercise-card-desc">
           {exercise.bodyPart}
-        </Button>
+        </Typography>
 
-        <Button
-          sx={{
-            mt: "10px",
-            ml: "21px",
-            color: "#000",
-            background: "#f4ebd9",
-            fontSize: "14px",
-            border: "1px solid #2c2821",
-            borderRadius: "10px",
-            textTransform: "capitalize",
-          }}
-        >
+        <Typography className="exercise-card-desc">
           {exercise.target}
-        </Button>
+        </Typography>
       </Stack>
       <Typography
         ml="21px"
         color="#000"
         fontWeight="bold"
-        mt="11px"
-        pb="10px"
         textTransform="capitalize"
         fontSize="22px"
       >
